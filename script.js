@@ -9,6 +9,12 @@ var submitScore = document.getElementById('submit');
 var questions = document.getElementById('questions');
 var mainContainer = document.getElementById('quiz-container');
 var quizStart= true;
+var timeRemaining = document.getElementById('time');
+var accuracy = document.getElementById('accuracy');
+var questionBox = document.createElement('questionBox');
+var finalScore = document.createElement('finalScore');
+var initials = document.createElement('initials');
+var enterInitials = document.createElement('enterInitials');
 var questionCount= 0;
 var answerCount = 0;
 var scoreBoardMax = 50;
@@ -37,8 +43,8 @@ var timerCount; //the amount of time that timer is going to run
 
 // document.getElementById("button1").textContent = questions[0].answer1
 
-const startButton = document.getElementById('start-button')
-const quizContainer = document.getElementById('quiz-container')
+const startButton = document.getElementById('start-button');
+const quizContainer = document.getElementById('quiz-container');
 
 
 startButton.addEventListener('click', startGame)
@@ -98,5 +104,6 @@ function selectAnswer(){
 
 }
 
+answer1Btn.style.display = 'none';
 
 
