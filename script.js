@@ -43,55 +43,30 @@ var choices = {
             answer2:"booleans",
             answer3: "alerts",
             answer4: "numbers"
+        },
+        2: 
+        {
+            answer1: "quotes",
+            answer2:"curly brackets",
+            answer3: "parenthesis",
+            answer4: "A square brackets"
+        },
+        3:
+        {
+            answer1:"numbers and strings",
+            answer2:"other arrays",
+            answer3: "booleans",
+            answer4:"all of the above"
+        },
+        4: 
+        {
+            answer1:"JavaScript",
+            answer2:"terminal",
+            answer3: "for loops",
+            answer4:"console.log"
         }
     }
 }
-// var  = {
-//     right: {
-//         1: "alerts",
-//         2: "curly brackets",
-//         3: 'all of the above',
-//         4: 'console.log'
-//     }
-// }
-
-// const questions = [
-//     {question:"Commonly used data types DO NOT Include:",
-//         1: {
-//             answer1:"strings",
-//             answer2:"booleans",
-//             answer3: "alerts",
-//             answer4: "numbers"
-//         }, 
-//         correct: "alerts" 
-//     }, 
-//     {question:"The condition in an if/else statement is enclosed within ____",
-//     2: {
-//         answer1:"quotes",
-//         answer2:"curly brackets",
-//         answer3: "parenthesis",
-//         answer4: "A square brackets"
-//     }, 
-//     correct: "curly brackets"
-//     },
-//     {question:"Arrays in JavaScript can be used to store ____.",
-//     3: {
-//         answer1:"numbers and strings",
-//         answer2:"other arrays",
-//         answer3: "booleans",
-//         answer4:"all of the above"
-//     }, 
-//     correct: "all of the above"
-//     },
-//     {question:"A very useful tool used during development and debugging for printing content to the debugger is:",
-//    4: {
-//         answer1:"JavaScript",
-//         answer2:"terminal",
-//         answer3: "for loops",
-//         answer4:"console.log"
-//     }, 
-//     correct: "console.log"
-//     }
 
 // ] //Recieved advice/guidence about question array from Tutor (Andrew Tirpok)
 
