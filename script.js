@@ -1,9 +1,19 @@
 var timeStart = 60;
+var startQuiz = document.getElementById('begin');
 var answer1Btn = document.getElementById('answer1');
 var answer2Btn = document.getElementById('answer2');
 var answer3Btn = document.getElementById('answer3');
 var answer4Btn = document.getElementById('answer4');
 var score = 0;
+var submitScore = document.getElementById('submit');
+var questions = document.getElementById('questions');
+var mainContainer = document.getElementById('quiz-container');
+var quizStart= true;
+var questionCount= 0;
+var answerCount = 0;
+var scoreBoardMax = 50;
+var lastQuestion = 0;
+var scoreBoardEl = document.getElementById('high-scores');
 
 var mainDivEl = document
 var timer;
