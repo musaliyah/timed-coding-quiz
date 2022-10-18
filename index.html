@@ -10,15 +10,23 @@
     </head>
     <body>
       
-
+        <header> 
+            <div> 
+                <button class="header" id="high-scores">High Scores!</button>
+            </div>
+            <div> 
+                <p>Time remaining: <span id ="time"></span></p>
+            </div>
+            
+        </header>
         <div class="quiz-container">
             <div id = "question-container" class="hidden"></div>
             <div id="questions">Question</div>
             <div id="answers" class="button-layout">
-                <button class = "button">Choice 1</button>
-                <button class = "button">Choice 2</button>
-                <button class = "button">Choice 3</button>
-                <button class = "button">Choice 4</button>
+                <button class = "button" id="answer1">Choice 1</button>
+                <button class = "button" id="answer2">Choice 2</button>
+                <button class = "button" id="answer3">Choice 3</button>
+                <button class = "button" id="answer4">Choice 4</button>
             </div>
             <div class="navigation">
                 <button id="start-button" class="start-button button">Start</button>
@@ -26,15 +34,6 @@
             </div>
         </div>
 
-    
-
-
-        <div class = "time-container">
-            <div class = "timer-text">
-            <div class = "large-font timer-count">60</div>
-            <h3>seconds remaining</h3>
-            </div>
-        </div>
         
     </main>
     <script src="script.js"></script>

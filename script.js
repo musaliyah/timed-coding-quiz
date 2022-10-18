@@ -1,9 +1,14 @@
-var timerElement = document.querySelector(".timer-count");
+var timeStart = 60;
+var answer1Btn = document.getElementById('answer1');
+var answer2Btn = document.getElementById('answer2');
+var answer3Btn = document.getElementById('answer3');
+var answer4Btn = document.getElementById('answer4');
+var score = 0;
+
+var mainDivEl = document
 var timer;
 //integer variable 
 var timerCount; //the amount of time that timer is going to run
-var questionNumber = 0;
-var answerNumber = 0; 
 // var startButton = document.querySelector(".start-button")
 // var isWin = false; 
 
