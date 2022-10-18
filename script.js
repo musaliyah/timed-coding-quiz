@@ -87,22 +87,22 @@ scoreBoardEl.addEventListener("click", function () {
             highScore += "User " + userName.initialName(4) + "the highest score is " + total[1] + "\n";
         }
     }
+    window.alert(highScore);
+});
+
+submitScore.addEventListener("click", function() {
+    var quizData = "quiz";
+    var userInfo = "";
+    var info = [];
+
+    userInfo = quizData + enterInitials.info;
+    info = [userInfo, highScore]
+
+    for(var i=0, )
 })
 // ] //Recieved advice/guidence about question array from Tutor (Andrew Tirpok)
 
-function startGame(){
-    console.log('Game Start')
-    startButton.classList.add('hide')
-    quizContainerElement.classList.remove('hide')
-}
 
-function setNextQuestion (){
-
-}
-
-function selectAnswer(){
-
-}
 
 submitScore.style.display = 'none'
 accuracy.style.display = 'none';
