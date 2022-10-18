@@ -68,6 +68,26 @@ var choices = {
     }
 }
 
+
+timeRemaining.textContent = time;
+
+scoreBoardEl.addEventListener("click", function () {
+    var user = "";
+    var highScore = "";
+    var initialName = "";
+
+    for (var i=0; i < localStorage.length; i++) {
+        var total = [];
+
+        user = localStorage.getItem(localStorage.key(i));
+        initialName = user.substring(0,4)
+        if(initialName == "quiz") {
+            total = user.split(",");
+            var userName = total[0]
+            highScore += "User " + userName.initialName(4) + "the highest score is " + total[1] + "\n";
+        }
+    }
+})
 // ] //Recieved advice/guidence about question array from Tutor (Andrew Tirpok)
 
 function startGame(){
