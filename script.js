@@ -104,6 +104,10 @@ function selectAnswer(){
 
 }
 
+submitScore.style.display = 'none'
+accuracy.style.display = 'none';
+enterInitials.style.display= 'none';
 answer1Btn.style.display = 'none';
-
-
+answer2Btn.style.display = 'none';
+answer3Btn.style.display = 'none';
+answer4Btn.style.display = 'none';
