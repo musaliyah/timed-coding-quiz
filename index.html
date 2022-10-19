@@ -10,36 +10,56 @@
       
         <header> 
             <div> 
-                <button class="header" id="high-scores">High Scores!</button>
+                <button class="header" id="high-scores" onClick="highScores()">High Scores! </button>
             </div>
             <div> 
                 <p>Time remaining: <span id ="time"></span></p>
             </div>
             
         </header>
-        <div class="quiz-container">
-            <div id = "question-container" class="hidden"></div>
 
-            <div id="questions">Question</div>
-            <div id="answers" class="button-layout">
-            <p id="finalScore"></p>
-            <p id="initials"></p>
-            <textarea id="userInitials"></textarea>
-                <button class = "button" id="begin">Begin Quiz</button>
-                <button class = "button" id="answer1">Choice 1</button>
-                <button class = "button" id="answer2">Choice 2</button>
-                <button class = "button" id="answer3">Choice 3</button>
-                <button class = "button" id="answer4">Choice 4</button>
-                <button class = "button" id="submit"></button>
-            </div>
-            <div id="accuracy"></div>
-            <p id="accuracy"></p>
+        <div class="information-container">
+            <h1>Coding Quiz</h1>
+            <button class = "button" id="begin">Begin Quiz</button>
         </div>
 
-        
-    </main>
+        <div id="quiz-container">
+            <h2 id="question" style="display: none"></h2>
+            <ul>
+                <div id="options">
+                    <button id="answer1btn"></button>
+                </div>
+                <div>
+                    <button id="answer2btn"></button>
+                </div>
+                <div>
+                    <button id="answer3btn"></button>
+                </div>
+                <div>
+                    <button id="answer4btn"></button>
+                </div>
+            </ul>
+        </div>
+    </body>
+
+    <div id="answers"></div>
+
+    <div id="quizOver" style="display:none">
+        <h2>Game complete</h2>
+        Your score: <div id="final-score"></div>
+        </br>
+            Initials: <input type="text" value="initials" id="initials">
+        </br>
+        <input type="button" value="submit" id="userInitials" onClick="userInitials()">
+    </div>
+    <div id="highscore-container" style="display: none">
+        <h2>highscores: </h2>
+        <div id="highscores-list"></div>
+            <input type="button" value="return" id="return" onClick="return-base">
+            <input type="button" id="delete-scores" value="delete" onClick="delete-scores">
+    </div>
     <script src="script.js"></script>
-   </body>
+ 
    
     
 </html>
