@@ -192,8 +192,44 @@ var timeCount = setInterval(function() {
         questionContainer.appendChild(answer1Btn);
         questionContainer.appendChild(finalScore);
         timeRemaining -= 1;
-        time.textContent = timeRemaining'
-        console.log()
+        time.textContent = timeRemaining;
+        console.log("time: " + timeRemaining)
+
+        answer1Btn.addEventListener("click", function() {
+            if(questions.textContent === "Commonly used data types DO NOT Include:" && answer1Btn.textContent === "alerts") {
+                console.log('right');
+                questionCount = 2;
+                answerCount = 1;
+                accuracy.style.display= "";
+                accuracy.textContent = "right";
+                accuracy.style.borderTop = 'solid red';
+                accuracy.appendChild(accuracy);
+            } else if (questions.textContent === "The condition in an if/else statement is enclosed within ____" && answer1Btn.textContent === "parenthesis") {
+                console.log('right');
+                questionCount = 3;
+                answerCount = 2;
+                accuracy.style.display= "";
+                accuracy.textContent = "right";
+                accuracy.style.borderTop = 'solid red';
+                accuracy.appendChild(accuracy);
+            }else if (questions.textContent === "A very useful tool used during development and debugging for printing content to the debugger is:" && answer1Btn.textContent === "console.log") {
+                console.log('right');
+                questionCount = 3;
+                answerCount = 2;
+                accuracy.style.display= "";
+                accuracy.textContent = "right";
+                accuracy.style.borderTop = 'solid red';
+                accuracy.appendChild(accuracy);
+            } else (questions.textContent === "Arrays in JavaScript can be used to store ____." && answer1Btn.textContent === "all of the above") {
+                console.log('right');
+                questionCount = 3;
+                answerCount = 2;
+                accuracy.style.display= "";
+                accuracy.textContent = "right";
+                accuracy.style.borderTop = 'solid red';
+                accuracy.appendChild(accuracy);
+            }
+        })
     }
 }
 
