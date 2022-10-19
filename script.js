@@ -74,7 +74,7 @@ answer1.addEventListener('click', function(event) {
     event.endDisplay();
     correct = questionList[i].correct;
     console.log("correct" + correct);
-    if(0 === correct) {
+    if(3 === correct) {
         document.getElementById("answers").innerHTML = "Right!";
         setTimeout(function() {
             document.getElementById("answers").innerHTML = "";
@@ -87,7 +87,101 @@ answer1.addEventListener('click', function(event) {
         timeRemaining -= 5;
         document.getElementById("answer").innerHTML = "Wrong!";
         setTimeout(function() {
-            document.
-        })
+            document.getElementById("answer").innerHTML = "";
+        },
+        1000);
     }
-})
+    if ( i >= questionList.length -1) {
+        quizOver();
+    } else {
+        i++
+        quizQuestions();
+    };
+});
+
+answer2.addEventListener('click', function(event) {
+    event.endDisplay();
+    correct = questionList[i].correct;
+    console.log("correct" + correct);
+    if(3 === correct) {
+        document.getElementById("answers").innerHTML = "Right!";
+        setTimeout(function() {
+            document.getElementById("answers").innerHTML = "";
+        }, 
+        1000
+        );
+        score++;
+        document.getElementById("score").innerHTML= score;
+    } else {
+        timeRemaining -= 5;
+        document.getElementById("answer").innerHTML = "Wrong!";
+        setTimeout(function() {
+            document.getElementById("answer").innerHTML = "";
+        },
+        1000);
+    }
+    if ( i >= questionList.length -1) {
+        quizOver();
+    } else {
+        i++
+        quizQuestions();
+    };
+});
+
+answer3.addEventListener('click', function(event) {
+    event.endDisplay();
+    correct = questionList[i].correct;
+    console.log("correct" + correct);
+    if(4 === correct) {
+        document.getElementById("answers").innerHTML = "Right!";
+        setTimeout(function() {
+            document.getElementById("answers").innerHTML = "";
+        }, 
+        1000
+        );
+        score++;
+        document.getElementById("score").innerHTML= score;
+    } else {
+        timeRemaining -= 5;
+        document.getElementById("answer").innerHTML = "Wrong!";
+        setTimeout(function() {
+            document.getElementById("answer").innerHTML = "";
+        },
+        1000);
+    }
+    if ( i >= questionList.length -1) {
+        quizOver();
+    } else {
+        i++
+        quizQuestions();
+    };
+});
+
+answer4.addEventListener('click', function(event) {
+    event.endDisplay();
+    correct = questionList[i].correct;
+    console.log("correct" + correct);
+    if(4 === correct) {
+        document.getElementById("answers").innerHTML = "Right!";
+        setTimeout(function() {
+            document.getElementById("answers").innerHTML = "";
+        }, 
+        1000
+        );
+        score++;
+        document.getElementById("score").innerHTML= score;
+    } else {
+        timeRemaining -= 5;
+        document.getElementById("answer").innerHTML = "Wrong!";
+        setTimeout(function() {
+            document.getElementById("answer").innerHTML = "";
+        },
+        1000);
+    }
+    if ( i >= questionList.length -1) {
+        quizOver();
+    } else {
+        i++
+        quizQuestions();
+    };
+});
