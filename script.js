@@ -98,7 +98,39 @@ submitScore.addEventListener("click", function() {
     userInfo = quizData + enterInitials.info;
     info = [userInfo, highScore]
 
-    for(var i=0, )
+    for(var i=0; i < localStorage.length, i++;) { 
+        var readValue = "";
+        var readUser = [];
+
+        userInfo = quizData + enterInitials.value;
+
+        readValue = localStorage.getItem(userInfo);
+
+        if (readValue == null) {
+            localStorage.setItem(userInfo, value);
+            window.alert("Highscore :" + highScore)
+            break;
+        } else if (readValue != null) {
+            readUser = readValue.split(",");
+        }
+
+        if ( userInfo == readUser[0] && highScore == readUser[1]) {
+            localStorage.setItem(userInfo, value);
+            window.alert(highScore + " " + enterInitials.value + "score will not be saved.")
+            break;
+        } else if (enterInitials.value == "") {
+            window.alert("Enter your initials, please!");
+            break;
+        } else if (userInfo == readUser[0] && highScore > readUser[1]) {
+            localStorage.setItem(userInfo, value);
+            window.alert("Highscore: " + highScore);
+            break;
+        } else if (userInfo == readUser[0] && highScore <checkUserValue[1]) {
+            localStorage.setItem(userInfo, value);
+            window.alert("Your score is lower than previously submitted. It will not be added to the leaderboard.")
+            break;
+        }
+    }
 })
 // ] //Recieved advice/guidence about question array from Tutor (Andrew Tirpok)
 

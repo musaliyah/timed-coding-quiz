@@ -3,10 +3,8 @@
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <meta http-equiv="E-UA-Compatible" content="ie=edge" />
         <link rel="stylesheet" href="style.css">
         <title>Timed JavaScript Quiz</title>
-        
     </head>
     <body>
       
@@ -21,8 +19,12 @@
         </header>
         <div class="quiz-container">
             <div id = "question-container" class="hidden"></div>
+
             <div id="questions">Question</div>
             <div id="answers" class="button-layout">
+            <p id="finalScore"></p>
+            <p id="initials"></p>
+            <textarea id="userInitials"></textarea>
                 <button class = "button" id="begin">Begin Quiz</button>
                 <button class = "button" id="answer1">Choice 1</button>
                 <button class = "button" id="answer2">Choice 2</button>
@@ -30,10 +32,6 @@
                 <button class = "button" id="answer4">Choice 4</button>
                 <button class = "button" id="submit"></button>
             </div>
-            <!-- <div class="navigation">
-                <button id="start-button" class="start-button button">Start</button>
-                <button id="next-button" class="next-button button">Next</button>
-            </div> -->
             <div id="accuracy"></div>
             <p id="accuracy"></p>
         </div>
