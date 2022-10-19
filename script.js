@@ -129,8 +129,16 @@ submitScore.addEventListener("click", function() {
             localStorage.setItem(userInfo, value);
             window.alert("Your score is lower than previously submitted. It will not be added to the leaderboard.")
             break;
+        } else {
+            localStorage.setItem(userInfo, value);
+            window.alert("Your highscore: " + highScore)
+            break;
         }
     }
+});
+
+answer1Btn.addEventListener("mouseover", function() { 
+    accuracy.style.display='none';
 })
 // ] //Recieved advice/guidence about question array from Tutor (Andrew Tirpok)
 
