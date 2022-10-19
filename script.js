@@ -185,3 +185,32 @@ answer4.addEventListener('click', function(event) {
         quizQuestions();
     };
 });
+
+function quizOver() {
+    document.getElementById("quizOver").style.display = "block";
+    document.getElementById("quiz-container").style.display = "none";
+    document.getElementById("timer").style.display = "none";
+    document.getElementById("scores").style.display = "none";
+    document.getElementById("answers").innerHTML = "";
+    document.getElementById("final-score").innerHTML = score;
+}
+
+function submit() {
+    highscoreList.push(document.getElementById("initials").value + " " + score);
+    highScores();
+}
+
+
+function highScores() {
+    document.getElementById("quiz-container").style.display="none";
+    document.getElementById("quizOver").style.display="none";
+    document.getElementById("highscore-container").style.display="block";
+
+    output="";
+    for(let x=0; x<highscoreList.length; x++) {
+        output = output + " " + highscoreList[x];
+    }
+    document.getElementById("highscore-list").innerHTML = output;
+    clear();
+    
+}
