@@ -1,3 +1,5 @@
+const { time } = require("uniqid");
+var checkTime = 1;
 var timeStart = 60;
 var startQuiz = document.getElementById('begin');
 var answer1Btn = document.getElementById('answer1');
@@ -139,7 +141,64 @@ submitScore.addEventListener("click", function() {
 
 answer1Btn.addEventListener("mouseover", function() { 
     accuracy.style.display='none';
-})
+}); 
+answer2Btn.addEventListener("mouseover", function() { 
+    accuracy.style.display='none';
+}); 
+answer3Btn.addEventListener("mouseover", function() { 
+    accuracy.style.display='none';
+}); 
+answer4Btn.addEventListener("mouseover", function() { 
+    accuracy.style.display='none';
+}); 
+submitScore.addEventListener("mouseover", function() { 
+    accuracy.style.display='none';
+}); 
+startQuiz.addEventListener("mouseover", function() { 
+    startQuiz.style.display = 'none';
+    questions.style.display = 'none';
+    finalScore.style.display = 'none';
+    score = 0;
+    lastQuestion = 0;
+    checkTime = 1;    
+    enterInitials.style.display = 'none';
+    timeRemaining = 60; 
+    time.textContent = timeRemaining;
+    
+}); 
+
+
+var timeCount = setInterval(function() {
+    if (score === 1) { 
+        highScore -= 10;
+    }
+    score = 0; 
+
+    if (timeRemaining >= 1 && lastQuestion !== 1) {
+        questionBox.textContent = questions.correct(questionCount);
+
+        questionBox.style.display = "";
+        answer1Btn.style.display = "";
+        answer2Btn.style.display = "";
+        questionBox.style.display = "";
+        questionBox.style.display = "";
+
+        answer1Btn.textContent = choices.options[answerCount][0];
+        answer2Btn.textContent = choices.options[answerCount][1];
+        answer3Btn.textContent = choices.options[answerCount][2];
+        answer4Btn.textContent = choices.options[answerCount][3];
+
+        questionContainer.appendChild(questions);
+        questionContainer.appendChild(answer1Btn);
+        questionContainer.appendChild(finalScore);
+        timeRemaining -= 1;
+        time.textContent = timeRemaining'
+        console.log()
+    }
+}
+
+)
+
 // ] //Recieved advice/guidence about question array from Tutor (Andrew Tirpok)
 
 
@@ -151,3 +210,5 @@ answer1Btn.style.display = 'none';
 answer2Btn.style.display = 'none';
 answer3Btn.style.display = 'none';
 answer4Btn.style.display = 'none';
+
+
