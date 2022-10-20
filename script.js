@@ -53,7 +53,7 @@ function countdownTimer() {
 
 beginQuizBtn.addEventListener("click", function() {
     quizContainer.style.display = "block";
-    informationContainer.style.display = "none";
+    document.getElementById("information-container").style.display = "none";
     countdownTimer.style.display= "block";
     document.getElementById("scores").style.display= "block";
     document.getElementById("score").innerHTML = score;
@@ -212,5 +212,16 @@ function highScores() {
     }
     document.getElementById("highscore-list").innerHTML = output;
     clear();
-    
+}
+
+function deleteScores() { 
+    highscoreList = [];
+}
+
+function clear () { 
+    time= 80;
+    timeRemaining=true;
+    timeStart=false;
+    i=0;
+    score=0;
 }
